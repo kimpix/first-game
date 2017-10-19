@@ -1,4 +1,4 @@
-function scaleToWindow(canvas, backgroundColor) {
+window.scaleToWindow = function (canvas, backgroundColor) {
   var scaleX, scaleY, scale, center;
 
   //1. Scale the canvas to the correct size
