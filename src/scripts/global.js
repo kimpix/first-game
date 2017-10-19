@@ -5,6 +5,7 @@ window.loader = PIXI.loader;
 window.resources = PIXI.loader.resources;
 window.Sprite = PIXI.Sprite;
 window.TextureCache = PIXI.utils.TextureCache;
+window.Rectangle = PIXI.Rectangle;
 
 
 //Create a container object called the `stage`

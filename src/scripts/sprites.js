@@ -1,9 +1,6 @@
 
-const texture = TextureCache["/images/link-walking-no-weapons.png"];
-const sprite = new Sprite(texture);
-
 loader
-.add(["/images/link-walking-no-weapons.png"])
+.add(["/sprites/links-walk.json"])
 .on("progress", loadProgressHandler)
 .load(setup);
 
@@ -13,12 +10,15 @@ function loadProgressHandler(loader, resource) {
 }    
 
 function setup() {
-    const linkWalking = new Sprite(
-        resources["/images/link-walking-no-weapons.png"].texture
+    console.log("all files loaded");
+    const linksWalking = new Sprite(
+      resources["/sprites/links-walk.json"].textures["linkWalk-back-03.png"]
     );
 
-    console.log("all files loaded");
-    stage.addChild(linkWalking);
+    linksWalking.x = 62;
+    linksWalking.y = 32;
+
+    stage.addChild(linksWalking);
     renderer.render(stage);
     //This code will run when the loader has finished loading the image
 }
