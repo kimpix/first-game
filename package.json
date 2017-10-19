@@ -1,0 +1,22 @@
+{
+  "name": "pixi",
+  "version": "1.0.0",
+  "description": "First game",
+  "main": "index.js",
+  "scripts": {
+    "clean": "rimraf dist",
+    "build": "npm run clean && webpack --config webpack-prod.config.js --colors",
+    "dev": "webpack-dev-server --config webpack-dev.config.js --watch --colors",
+    "lint:js": "eslint src",
+    "lint:styles": "stylelint \"src/**/*.scss\"",
+    "lint": "npm run lint:js && npm run lint:styles",
+    "precommit": "npm run lint",
+    "commitmsg": "validate-commit-msg"
+  },
+  "author": "Kim ROSE",
+  "license": "ISC",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/kimpix/first-game.git"
+  }
+}
