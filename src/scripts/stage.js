@@ -7,7 +7,7 @@ if(!PIXI.utils.isWebGLSupported()){
 document.body.appendChild(renderer.view);
 
 
-
+renderer.backgroundColor = 0x489648;
 //Tell the `renderer` to `render` the `stage`
 renderer.render(stage);
 
