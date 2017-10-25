@@ -1,3 +1,5 @@
+window.PIXI = require ('pixi.js');
+
 //Aliases
 window.Container = PIXI.Container;
 window.autoDetectRenderer = PIXI.autoDetectRenderer;
