@@ -6,7 +6,6 @@ let isDown = false;
 let isLeft = false;
 let isRight = false;
 let currentFrame = 0;
-let flipped = false;
 
 loader
   .on("progress", loadProgressHandler)
@@ -24,19 +23,19 @@ function loadProgressHandler(loader, resource) {
 function play(sprite) {
   currentFrame = sprite.currentFrame;
   if (isUp === true && currentFrame === 13) {
-    sprite.gotoAndPlay(7);
+    sprite.gotoAndPlay(8);
   }
 
-  if (isDown === true && currentFrame === 6) {
+  if (isDown === true && currentFrame === 7) {
     sprite.gotoAndPlay(1);
   }
 
-  if (isRight === true && currentFrame === 20) {
+  if (isRight === true && currentFrame === 19) {
     sprite.gotoAndPlay(14);
   }
 
   if (isLeft === true && currentFrame === 27) {
-    sprite.gotoAndPlay(21);
+    sprite.gotoAndPlay(22);
   }
 
   //Use the cat's velocity to make it move
@@ -89,7 +88,7 @@ function setup() {
     //Change the cat's velocity when the key is pressed
     LinkWalkingFrontAnimatedSprite.vx = -5;
     LinkWalkingFrontAnimatedSprite.vy = 0;
-    LinkWalkingFrontAnimatedSprite.gotoAndPlay(13);
+    LinkWalkingFrontAnimatedSprite.gotoAndPlay(22);
     isLeft = true;
   };
 
@@ -142,7 +141,7 @@ function setup() {
   down.press = function () {
     LinkWalkingFrontAnimatedSprite.vy = 5;
     LinkWalkingFrontAnimatedSprite.vx = 0;
-    LinkWalkingFrontAnimatedSprite.play();
+    LinkWalkingFrontAnimatedSprite.gotoAndPlay(1);
     isDown = true;
   };
   down.release = function () {
