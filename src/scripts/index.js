@@ -1,6 +1,6 @@
-import './plugins/pixi.min';
-import './utils/scaleToWindow';
+import '../../node_modules/pixi-sprite-utilities/index';
 import './global';
+import './utils/scaleToWindow';
 import './sprites';
 import './stage';
 
